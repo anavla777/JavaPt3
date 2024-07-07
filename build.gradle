@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group = 'guru.qa'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(
+            'com.opencsv:opencsv:5.8',
+            'org.postgresql:postgresql:42.7.3',
+            'org.springframework:spring-jdbc:6.1.10'
+    )
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+}
